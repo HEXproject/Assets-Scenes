@@ -38,11 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 11
   m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 8
+    serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -87,7 +87,7 @@ LightmapSettings:
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_ShadowMaskMode: 2
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -136,9 +136,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hexSprite: {fileID: 21300000, guid: ca5a0f364de1269448d3f92ffd66fcb4, type: 3}
+  hexBGSprite: {fileID: 0}
   handBG: []
   deckList: []
-  removeButton: {fileID: 0}
   mulliganHex: {fileID: 0}
   smoothTime: 1
   HandSize: 5
@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 1490392522}
   - component: {fileID: 1490392521}
   - component: {fileID: 1490392520}
+  - component: {fileID: 1490392525}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -249,6 +250,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1490392525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1490392519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
 --- !u!1 &1953875776
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,8 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea24721baaf37b14892488e92a2c3139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefabHexTile: {fileID: 1883339107241814, guid: 524cb34700390ce40a24b4f39b4d0fe8,
-    type: 2}
+  PrefabHexTile: {fileID: 100000, guid: b94a15abb8d8468409fe9d4a5e3a1372, type: 3}
   HexMaterials:
   - {fileID: 2100000, guid: 076f11d91c3c31241bd2d56059e82fed, type: 2}
   mapSize: 10
